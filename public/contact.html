@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav></nav>
+    
+    <div class="form-section" id="form-section">
+        <div class="form-copy-container">
+            <h1>Get in touch</h1>
+            <p>Interested in collaborating, have a question, or want to day hi? Leave your info below.</p>
+        </div>
+        <div class="form-container" id="form-container">
+            <form id="contact-form" class="contact-form" method="post">
+                <label for="Name">NAME</label>
+                <input type="text" name="Name" placeholder="Enter your name" required>
+                <label for="Email">EMAIL ADDRESS</label>
+                <input type="email" name="Email" placeholder="Enter your email address" required pattern="[a-z0-9._%=-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <label for="Message">MESSAGE</label>
+                <textarea type="text" name="Message" placeholder="Enter your message" required></textarea>
+                <div class="g-recaptcha" data-sitekey="6Lc1-9cZAAAAAFynEHsikM2l5o8cmO5dmcfo-Z0e"></div>
+                <br/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <footer></footer>
+    
+    <script src="js/script.js"></script>
+    
+   
+    <!-- <script>window.history.replaceState( null, null, window.location.href );</script> -->
+</body>
+</html>
