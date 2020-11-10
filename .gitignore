@@ -1,2 +1,5 @@
 # Environment variables folder
 env
+
+# Environment variables folder
+node_modules
