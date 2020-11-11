@@ -3,8 +3,7 @@ const nodeMailer = require('nodemailer');
 exports.form = (obj) => {
     //--------------------Email Structure--------------------\\
         let email = {
-        // from: 'me@adriandeniz.com',
-        to: 'ajdeniz@gmail.com',
+        to: process.env.EMAIL,
         replyTo: `${obj.email}`,
         subject: 'Node.js Contact Form',
         text: `You just got a form submission! Form: Contact Form Site: www.nodeproject.com Submitted Content: Name: ${obj.name} Email: ${obj.email} Message: ${obj.message}`,
@@ -26,14 +25,12 @@ exports.form = (obj) => {
 
     //--------------------nodemailer-code--------------------\\
         let client = nodeMailer.createTransport({
-            host: 'smtp.gmail.com',
+            host: process.env.SMTP,
             port: 465,
             secure: true,
             auth: {
-            // user: 'me@adriandeniz.com',
-            // pass: 'Timcwe89!'
             type: 'OAuth2', //Authentication type
-            user: 'ajdeniz@gmail.com',
+            user: process.env.EMAIL,
             clientId: process.env.CLIENT_ID,
             clientSecret: process.env.CLIENT_SECRET,
             refreshToken: process.env.REFRESH_TOKEN

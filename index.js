@@ -1,6 +1,4 @@
 const http = require('http');
-const fs = require('fs');
-const path = require('path');
 const Route = require('./modules/route.js');
 require('./modules/config.js')();
 const email = require('./modules/email.js');
